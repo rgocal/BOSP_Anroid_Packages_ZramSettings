@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+        <style name="HoloBackgroundThemeSlide" parent="@android:style/Theme.Holo">
+        <item name="android:homeAsUpIndicator">@drawable/ic_drawer</item>
+        <item name="android:listViewStyle">@style/Settings.Widget.ListView</item>
+        <item name="android:listViewWhiteStyle">@style/Settings.Widget.ListView.White</item>
+        </style>
+    <style name="Settings.Widget.ListView" parent="@android:style/Widget.Holo.ListView">
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    <style name="Settings.Widget.ListView.White" parent="@android:style/Widget.ListView.White">
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+    <style name="DrawerMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">#ff343434</item>
+        <item name="android:textColor">#ff060606</item>
+    </style>
+</resources>

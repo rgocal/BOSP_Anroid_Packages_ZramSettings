@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory 
+        android:title="Navigation" >
+        <Preference
+            android:title="Zram Status"
+            android:summary="Calculate current Zram usage" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.zRAMstatus"
+                android:targetPackage="com.NxIndustries.Zram" />
+        </Preference>
+        <Preference
+            android:title="Zram Brute"
+            android:summary="Forcefully apply Zram compression" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.AdvancezRAM"
+                android:targetPackage="com.NxIndustries.Zram" />
+        </Preference>
+        <Preference
+            android:title="Zram Modifier"
+            android:summary="Modify Zram usage on device" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zram.helpers.ZramActivity"
+                android:targetPackage="com.NxIndustries.Zram" />
+        </Preference>
+        <Preference
+            android:title="RGN"
+            android:summary="Modify foreground memory" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zram.RGND"
+                android:targetPackage="com.NxIndustries.Zram" />
+        </Preference>
+        <Preference
+            android:title="Wiki" 
+            android:summary="Understanding Zram and its use" >
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://en.wikipedia.org/wiki/ZRam" />
+        </Preference>
+        <Preference
+            android:title="License" >
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://opensource.org/licenses/BSD-3-Clause" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

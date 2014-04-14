@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/zram_disk_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="zRAM Disk Size" />
+
+    <TextView
+        android:id="@+id/zram_compressed_data_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_disk_size"
+        android:text="Compressed Data" />
+
+    <TextView
+        android:id="@+id/zram_original_data_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_compressed_data_size"
+        android:text="Original Data" />
+
+    <TextView
+        android:id="@+id/zram_mem_used_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_original_data_size"
+        android:text="Data Used" />
+
+    <ProgressBar
+        android:id="@+id/zram_compression_ratio_bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/progressbar_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_mem_used_total"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/zram_compression_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_compression_ratio_bar"
+        android:text="Compression Ratio" />
+
+    <ProgressBar
+        android:id="@+id/zram_used_ratio_bar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/progressbar_height"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_compression_ratio"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/zram_used_ratio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/zram_used_ratio_bar"
+        android:text="zRAM Ratio Used" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zram_used_ratio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:text="Note:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="If the above is showing blank values, your device has zram disabled or does not support VM changes or virtual monitor values!"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/action_reload"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:text="Reload" />
+
+    <TextView
+        android:id="@+id/ram_available"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/action_reload"
+        android:layout_alignLeft="@+id/action_reload"
+        android:gravity="center_horizontal"
+        android:textIsSelectable="true" />
+
+</RelativeLayout>

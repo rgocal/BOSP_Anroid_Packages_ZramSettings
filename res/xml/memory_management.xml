@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="zRAM Settings"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+	<ListPreference
+        android:key="pref_zram_size"
+        android:dialogTitle="zRam"
+        android:title="zRAM Configuration"
+        android:summary="comcache memory settings"
+        android:entries="@array/pref_zram_size_entries"
+        android:entryValues="@array/pref_zram_size_values" />
+
+    <CheckBoxPreference
+        android:key="pref_purgeable_assets"
+        android:title="Purge Memory" />
+
+    <CheckBoxPreference
+        android:key="pref_ksm"
+        android:title="Enable KSM" />
+    
+    <PreferenceScreen
+            android:title="Zram Compression" 
+            android:summary="allows users to enter a custom compression ratio for VM usage. This method is forcefull depending on kernel.">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.AdvancezRAM"
+                android:targetPackage="com.Biotic.zramsettings" />
+        </PreferenceScreen>
+    
+</PreferenceScreen>

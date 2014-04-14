@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Performance settings -->
+    <string-array name="pref_zram_size_entries">
+        <item>Disabled</item>
+        <item>4%</item>
+        <item>10%</item>
+        <item>18% (default)</item>
+        <item>26%</item>
+        <item>34%</item>
+        <item>42%</item>
+        <item>50%</item>
+    </string-array>
+
+    <string-array name="pref_zram_size_values" translatable="false">
+        <item>0</item>
+        <item>4</item>
+        <item>10</item>
+        <item>18</item>
+        <item>26</item>
+        <item>34</item>
+        <item>42</item>
+        <item>50</item>
+    </string-array>
+    
+    <string-array name="read_ahead" translatable="false">
+        <item>@string/size_128_kb</item>
+        <item>@string/size_256_kb</item>
+        <item>@string/size_512_kb</item>
+        <item>@string/size_1024_kb</item>
+        <item>@string/size_2048_kb</item>
+        <item>@string/size_4096_kb</item>
+    </string-array>
+    <string-array name="read_ahead_values" translatable="false">
+        <item>128</item>
+        <item>256</item>
+        <item>512</item>
+        <item>1024</item>
+        <item>2048</item>
+        <item>4096</item>
+    </string-array>
+</resources>

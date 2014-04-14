@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<preference-headers  xmlns:android="http://schemas.android.com/apk/res/android">
+        <header
+            android:title="Zram" 
+            android:summary="VM preferences and toggles" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.ZRAMconfigActivity"
+                android:targetPackage="com.Biotic.zramsettings" />
+        </header>
+        <header
+            android:title="VM Settings"
+            android:summary="Zram performance settings" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zram.helpers.ZramActivity"
+                android:targetPackage="com.Biotic.zramsettings" />
+        </header>
+        <header
+            android:title="Zram Virtual Status"
+            android:summary="physically view VM usage" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.zRAMstatus"
+                android:targetPackage="com.Biotic.zramsettings" />
+        </header>
+        <header
+            android:fragment="com.android.zramconfig.Memory"
+            android:title="Memory Managment"
+            android:summary="Seed/Manage Foreground Memory" />
+        <header
+    android:title="What is zRAM?"
+    android:summary="http://en.wikipedia.org/wiki/ZRam">
+    	<intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.android.zramconfig.Answers"
+                android:targetPackage="com.Biotic.zramsettings" />
+    	</header>
+</preference-headers>
